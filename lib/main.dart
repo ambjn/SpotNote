@@ -16,7 +16,15 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return GetMaterialApp(
       title: 'SpotNote',
-      theme: ThemeData(),
+      theme: ThemeData(
+        fontFamily: 'Montserrat',
+        brightness: Brightness.light,
+        primaryColor: Colors.white,
+        appBarTheme: const AppBarTheme(
+          backgroundColor: Colors.transparent,
+          elevation: 0,
+        ),
+      ),
     );
   }
 }

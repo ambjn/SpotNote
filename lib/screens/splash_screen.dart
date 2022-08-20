@@ -43,6 +43,7 @@ class SplashScreen extends StatelessWidget {
                         style: TextStyle(fontSize: 25),
                       ),
                     ),
+                    const SizedBox(height: 35),
                     Container(
                       alignment: Alignment.centerLeft,
                       child: Image.asset(
@@ -52,7 +53,7 @@ class SplashScreen extends StatelessWidget {
                   ],
                 ),
               ),
-              const SizedBox(height: 75),
+              const SizedBox(height: 70),
               SizedBox(
                 width: 180.0,
                 height: 50.0,

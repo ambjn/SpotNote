@@ -39,7 +39,7 @@ class SplashScreen extends StatelessWidget {
                     Container(
                       padding: const EdgeInsets.only(top: 25),
                       child: const Text(
-                        "Create and design your notes easily 🗒️",
+                        "create and access your notes easily 🗒️",
                         style: TextStyle(fontSize: 25),
                       ),
                     ),

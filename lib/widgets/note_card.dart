@@ -32,7 +32,7 @@ class NoteCard extends StatelessWidget {
             Row(
               children: [
                 const CustomIcon(
-                    icon: FontAwesomeIcons.bell, color: Colors.red),
+                    icon: FontAwesomeIcons.book, color: Colors.redAccent),
                 const SizedBox(
                   width: 15,
                 ),

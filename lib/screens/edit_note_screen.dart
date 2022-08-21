@@ -65,7 +65,8 @@ class _EditNoteScreenState extends State<EditNoteScreen> {
       child: ElevatedButton(
         style: ElevatedButton.styleFrom(
           foregroundColor: Colors.white,
-          backgroundColor: isFormValid ? Colors.teal : Colors.grey.shade700,
+          backgroundColor:
+              isFormValid ? Colors.redAccent : Colors.grey.shade700,
         ),
         onPressed: addOrUpdateNote,
         child: const Icon(

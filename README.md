@@ -1,16 +1,41 @@
-# spotnote
+# Notely
 
-A new Flutter project.
+## About:
 
-## Getting Started
+A note taking app, create and access your notes easily 🗒️
 
-This project is a starting point for a Flutter application.
+## Packages:
 
-A few resources to get you started if this is your first Flutter project:
+<ul>
+<li> get: ^4.6.5 </li>
+<li> sqflite: ^2.0.3+1 </li>
+<li> intl: ^0.17.0 </li>
+<li> font_awesome_flutter: ^10.1.0 </li>
+<li> flutter_switch: ^0.3.2 </li>
+<li> local_auth: ^2.1.2</li>
+</ul>
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+## Features:
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+<ul>
+<li> Add Notes </li>
+<li> Edit Notes </li>
+<li> View Notes </li>
+<li> Search Notes </li>
+<li> Local-Auth Authentication </li>
+<ul>
+
+### Installation:
+
+In the command terminal, run the following commands:
+
+    $ git clone https://github.com/ambjn/SpotNote.git
+    $ cd SpotNote
+    $ flutter run
+
+## Screenshots:
+
+<center> 
+<img src = 'https://github.com/ambjn/SpotNote/blob/master/screenshots/1.png' alt='screenshot-of-app-1'>
+<img src = 'https://github.com/ambjn/SpotNote/blob/master/screenshots/2.png' alt='screenshot-of-app-2'>
+</center>

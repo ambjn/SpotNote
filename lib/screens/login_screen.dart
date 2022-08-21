@@ -106,9 +106,12 @@ class _LoginScreenState extends State<LoginScreen> {
                 child: Row(
                   mainAxisSize: MainAxisSize.min,
                   children: const [
-                    Text('Use Fingerprint'),
+                    Text(
+                      'Use Fingerprint',
+                      style: TextStyle(color: Colors.grey),
+                    ),
                     SizedBox(width: 10),
-                    Icon(Icons.fingerprint),
+                    Icon(Icons.fingerprint, color: Colors.redAccent),
                   ],
                 ),
               ),
@@ -118,9 +121,13 @@ class _LoginScreenState extends State<LoginScreen> {
                 child: Row(
                   mainAxisSize: MainAxisSize.min,
                   children: const [
-                    Text('Use PIN/Password/Pattern'),
+                    Text(
+                      'Use PIN/Password/Pattern',
+                      style: TextStyle(color: Colors.grey),
+                    ),
                     SizedBox(width: 10),
-                    Icon(Icons.perm_device_information),
+                    Icon(Icons.perm_device_information,
+                        color: Colors.redAccent),
                   ],
                 ),
               ),

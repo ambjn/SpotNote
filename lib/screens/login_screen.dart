@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:get/get.dart';
 import 'package:local_auth/local_auth.dart';
+import 'package:spotnote/screens/notes_screen.dart';
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({super.key});
@@ -31,6 +33,10 @@ class _LoginScreenState extends State<LoginScreen> {
     if (!mounted) {
       return;
     }
+
+    setState(() {
+      Get.to(() => const NotesScreen());
+    });
   }
 
   Future<void> _authenticateWithBiometrics() async {
@@ -53,6 +59,9 @@ class _LoginScreenState extends State<LoginScreen> {
     if (!mounted) {
       return;
     }
+    setState(() {
+      Get.to(() => const NotesScreen());
+    });
   }
 
   @override
@@ -96,7 +105,7 @@ class _LoginScreenState extends State<LoginScreen> {
                 onPressed: _authenticateWithBiometrics,
                 child: Row(
                   mainAxisSize: MainAxisSize.min,
-                  children: const <Widget>[
+                  children: const [
                     Text('Use Fingerprint'),
                     SizedBox(width: 10),
                     Icon(Icons.fingerprint),
@@ -108,7 +117,7 @@ class _LoginScreenState extends State<LoginScreen> {
                 onPressed: _authenticate,
                 child: Row(
                   mainAxisSize: MainAxisSize.min,
-                  children: const <Widget>[
+                  children: const [
                     Text('Use PIN/Password/Pattern'),
                     SizedBox(width: 10),
                     Icon(Icons.perm_device_information),

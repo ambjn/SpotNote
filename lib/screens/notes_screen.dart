@@ -3,6 +3,8 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:get/get.dart';
 import 'package:spotnote/database/db.dart';
 import 'package:spotnote/model/note_model.dart';
+import 'package:spotnote/screens/edit_note_screen.dart';
+import 'package:spotnote/screens/notes_detail_screen.dart';
 import 'package:spotnote/widgets/note_card.dart';
 
 class NotesScreen extends StatefulWidget {
@@ -118,6 +120,7 @@ class _NotesScreenState extends State<NotesScreen> {
           backgroundColor: Colors.amber,
           child: const Icon(FontAwesomeIcons.notesMedical),
           onPressed: () async {
+            await Get.to(() => const EditNoteScreen());
             refreshNotes();
           },
         ),
@@ -131,6 +134,7 @@ class _NotesScreenState extends State<NotesScreen> {
         final note = notes[index];
         return GestureDetector(
           onTap: () async {
+            await Get.to(() => NotesDetailScreen(noteId: note.id!));
             refreshNotes();
           },
           child: Padding(

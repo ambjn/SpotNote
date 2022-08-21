@@ -23,7 +23,7 @@ A note taking app, create and access your notes easily 🗒️
 <li> View Notes </li>
 <li> Search Notes </li>
 <li> Local-Auth Authentication </li>
-<ul>
+</ul>
 
 ### Installation:
 

@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
-import 'package:spotnote/screens/notes_screen.dart';
 import 'package:spotnote/screens/splash_screen.dart';
 
 void main() {
@@ -30,7 +29,7 @@ class MyApp extends StatelessWidget {
       ),
       initialRoute: '/',
       getPages: [
-        GetPage(name: '/', page: () => SplashScreen(securityStatus: true)),
+        GetPage(name: '/', page: () => const SplashScreen()),
         GetPage(name: '/notes', page: () => const NotesScreen()),
       ],
     );

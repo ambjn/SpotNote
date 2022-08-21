@@ -1,10 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:spotnote/screens/login_screen.dart';
 import 'package:spotnote/screens/notes_screen.dart';
 
-class SplashScreen extends StatelessWidget {
-  const SplashScreen({super.key});
+class SplashScreen extends StatefulWidget {
+  SplashScreen({super.key, required this.securityStatus});
+  bool securityStatus;
 
+  @override
+  State<SplashScreen> createState() => _SplashScreenState();
+}
+
+class _SplashScreenState extends State<SplashScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -61,7 +68,18 @@ class SplashScreen extends StatelessWidget {
                 width: 180.0,
                 height: 50.0,
                 child: ElevatedButton(
-                    onPressed: () => Get.to(() => const NotesScreen()),
+                    onPressed: () async {
+                      if (widget.securityStatus == true) {
+                        Get.to(() => const LoginScreen());
+                      }
+                      if (widget.securityStatus == false) {
+                        setState(() {
+                          widget.securityStatus = false;
+                        });
+
+                        await Get.to(() => const NotesScreen());
+                      }
+                    },
                     style: ButtonStyle(
                         backgroundColor:
                             MaterialStateProperty.all(Colors.amber.shade400),

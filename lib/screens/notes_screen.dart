@@ -5,6 +5,7 @@ import 'package:spotnote/database/db.dart';
 import 'package:spotnote/model/note_model.dart';
 import 'package:spotnote/screens/edit_note_screen.dart';
 import 'package:spotnote/screens/notes_detail_screen.dart';
+import 'package:spotnote/screens/settings_page.dart';
 import 'package:spotnote/widgets/note_card.dart';
 
 class NotesScreen extends StatefulWidget {
@@ -41,6 +42,7 @@ class _NotesScreenState extends State<NotesScreen> {
             children: [
               const SizedBox(height: 25),
               Row(
+                crossAxisAlignment: CrossAxisAlignment.end,
                 children: const [
                   Text(
                     "Spot",
@@ -58,6 +60,17 @@ class _NotesScreenState extends State<NotesScreen> {
               ),
             ],
           ),
+          actions: [
+            Padding(
+              padding: const EdgeInsets.only(right: 10, top: 20),
+              child: IconButton(
+                  onPressed: () => Get.to(() => SettingsPage()),
+                  icon: const Icon(
+                    FontAwesomeIcons.gear,
+                    color: Colors.redAccent,
+                  )),
+            )
+          ],
         ),
         body: Column(
           children: [

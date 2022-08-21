@@ -103,7 +103,7 @@ class _NotesScreenState extends State<NotesScreen> {
                     ? const CircularProgressIndicator()
                     : notes.isEmpty
                         ? const Text(
-                            'no notes :(',
+                            'no notes 😟',
                             style:
                                 TextStyle(color: Colors.black87, fontSize: 24),
                           )

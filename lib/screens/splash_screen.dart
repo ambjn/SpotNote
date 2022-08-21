@@ -37,7 +37,7 @@ class SplashScreen extends StatelessWidget {
                       ],
                     ),
                     Container(
-                      padding: const EdgeInsets.only(top: 25),
+                      padding: const EdgeInsets.only(top: 35),
                       child: const Text(
                         "create and access your notes easily 🗒️",
                         style: TextStyle(fontSize: 25),
@@ -75,7 +75,7 @@ class SplashScreen extends StatelessWidget {
                           style: TextStyle(color: Colors.black, fontSize: 18),
                         ),
                         Icon(
-                          Icons.lock_outline_rounded,
+                          Icons.arrow_forward,
                           color: Colors.black,
                         ),
                       ],

@@ -19,7 +19,7 @@ class _NotesScreenState extends State<NotesScreen> {
   TextEditingController controller = TextEditingController();
   List<Note> notes = <Note>[];
   bool _isLoading = false;
-  bool securityStatus = false;
+  // bool securityStatus = false;
 
   @override
   void initState() {
@@ -66,7 +66,7 @@ class _NotesScreenState extends State<NotesScreen> {
               padding: const EdgeInsets.only(right: 10, top: 20),
               child: IconButton(
                   onPressed: () => Get.to(() => SettingsPage(
-                        isToggled: securityStatus,
+                      // isToggled: securityStatus,
                       )),
                   icon: const Icon(
                     FontAwesomeIcons.gear,

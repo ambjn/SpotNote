@@ -4,14 +4,15 @@ import 'package:get/get.dart';
 import 'package:spotnote/screens/splash_screen.dart';
 
 class SettingsPage extends StatefulWidget {
-  SettingsPage({super.key, required this.isToggled});
-  bool isToggled;
+  SettingsPage({super.key});
 
   @override
   State<SettingsPage> createState() => _SettingsPageState();
 }
 
 class _SettingsPageState extends State<SettingsPage> {
+  bool isToggled = true;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -62,13 +63,17 @@ class _SettingsPageState extends State<SettingsPage> {
                 toggleSize: 15.0,
                 borderRadius: 10.0,
                 activeColor: Colors.redAccent,
-                value: widget.isToggled,
+                value: isToggled,
                 onToggle: (value) async {
                   setState(() {
-                    widget.isToggled = value;
+                    isToggled = value;
                   });
-                  await Get.to(
-                      () => SplashScreen(securityStatus: widget.isToggled));
+                  await Get.to(() => SplashScreen(securityStatus: isToggled));
+                  if (value == false) {
+                    setState(() {
+                      isToggled = false;
+                    });
+                  }
                 },
               ),
             ],

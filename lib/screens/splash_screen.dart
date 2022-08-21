@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:spotnote/screens/login_screen.dart';
 import 'package:spotnote/screens/notes_screen.dart';
-import 'package:spotnote/screens/settings_page.dart';
 
 class SplashScreen extends StatefulWidget {
   SplashScreen({super.key, required this.securityStatus});

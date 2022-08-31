@@ -1,4 +1,4 @@
-# Notely
+# SpotNote
 
 ## About:
 
